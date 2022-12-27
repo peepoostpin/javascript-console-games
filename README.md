@@ -1,4 +1,4 @@
 # javascript-console-games
 so here are javascirpt console games1
 
-always run in console on about:blank
+very cool because it can be run in every website and it cant get unblocked
