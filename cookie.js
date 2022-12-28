@@ -1,5 +1,4 @@
-// BTW SO LIKE THERE AR A FEW BUGS SO LIKE YE LIEK OVENS AND THAT DONT WORK YET BUT I WILL FIX IT BECAUSE IM COOL
-let cookies = 10000;
+let cookies = 0;
 let clickMultiplier = 1;
 let ovenMultiplier = 1;
 let factoryMultiplier = 1;
