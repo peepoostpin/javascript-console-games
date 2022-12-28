@@ -8,8 +8,12 @@ let ovenInterval;
 let factoryInterval;
 
 const clickCookie = () => {
-  cookies += 1 * clickMultiplier;
-  console.log(`You have ${cookies} cookie(s).`);
+  if (!powerOff) {
+    cookies += 1 * clickMultiplier;
+    console.log(`You have ${cookies} cookie(s).`);
+  } else {
+    console.log("Power is currently OFF. You cannot click cookies.");
+  }
 };
 
 const bakeCookies = () => {
@@ -25,6 +29,7 @@ const produceCookies = () => {
 console.log("Welcome to Cookie Clicker! To click the cookie, type 'c' and press Enter. To open the shop, type 's' and press Enter. To quit the game, type 'e' and press Enter.");
 
 let gameRunning = true;
+let powerOff = false;
 
 // Set intervals for ovens and factories outside of main game loop
 ovenInterval = setInterval(bakeCookies, 1000);
@@ -35,6 +40,15 @@ while (gameRunning) {
   switch (input) {
     case "c":
       clickCookie();
+      break;
+    case "p":
+      if (powerOff) {
+         powerOff = false;
+         console.log("Power is now ON. You can click cookies again.");
+      } else {
+        powerOff = true;
+        console.log("Power is now OFF. You can only use ovens and factories to produce cookies.");
+      }
       break;
     case "s":
       console.log("Welcome to the shop! Here are the available items:");
