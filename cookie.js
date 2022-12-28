@@ -16,11 +16,13 @@ const clickCookie = () => {
 
 const bakeCookies = () => {
   cookies += 1 * ovenMultiplier;
+  ovens += 1
   console.log(`Your Cookie Oven is baking cookies. You now have ${cookies} cookie(s).`);
 };
 
 const produceCookies = () => {
   cookies += 1 * factoryMultiplier;
+  factories += 1
   console.log(`Your Cookie Factory is producing cookies. You now have ${cookies} cookie(s).`);
 };
 
