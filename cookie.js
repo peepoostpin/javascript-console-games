@@ -17,14 +17,19 @@ const clickCookie = () => {
 };
 
 const bakeCookies = () => {
-  cookies += 1 * ovenMultiplier;
-  console.log(`Your Cookie Oven is baking cookies. You now have ${cookies} cookie(s).`);
+  if (!powerOff) {
+    cookies += 1 * ovenMultiplier;
+    console.log(`Your Cookie Oven is baking cookies. You now have ${cookies} cookie(s).`);
+  }
 };
 
 const produceCookies = () => {
-  cookies += 1 * factoryMultiplier;
-  console.log(`Your Cookie Factory is producing cookies. You now have ${cookies} cookie(s).`);
+  if (!powerOff) {
+    cookies += 1 * factoryMultiplier;
+    console.log(`Your Cookie Factory is producing cookies. You now have ${cookies} cookie(s).`);
+  }
 };
+
 
 console.log("Welcome to Cookie Clicker! To click the cookie, type 'c' and press Enter. To open the shop, type 's' and press Enter. To quit the game, type 'e' and press Enter.");
 
