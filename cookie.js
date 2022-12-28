@@ -4,6 +4,8 @@ let cookies = 0;
 let clickMultiplier = 1;
 let ovenMultiplier = 1;
 let factoryMultiplier = 1;
+let ovens = 0;
+let factories = 0;
 let ovenInterval;
 let factoryInterval;
 
