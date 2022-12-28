@@ -47,7 +47,7 @@ while (gameRunning) {
             if (cookies >= 100) {
                             console.log("You have purchased the Automatic Cookie Clicker. Cookies will now be automatically collected for you.");
               cookies -= 100;
-              clickMultiplier = 2;
+              clickMultiplier += 2;
               shopRunning = false;
             } else {
               console.log("You don't have enough cookies to buy this item. Please choose another item or type 'exit' to exit the shop.");
@@ -57,7 +57,7 @@ while (gameRunning) {
             if (cookies >= 250) {
               console.log("You have purchased the Cookie Oven. Your cookie production has increased.");
               cookies -= 250;
-              ovenMultiplier = 2;
+              ovenMultiplier += 2;
               ovenInterval = setInterval(bakeCookies, 1000);
               shopRunning = false;
             } else {
@@ -68,7 +68,7 @@ while (gameRunning) {
             if (cookies >= 500) {
               console.log("You have purchased the Cookie Factory. Your cookie production has greatly increased.");
               cookies -= 500;
-              factoryMultiplier = 5;
+              factoryMultiplier += 5;
               factoryInterval = setInterval(produceCookies, 1000);
               shopRunning = false;
             } else {
