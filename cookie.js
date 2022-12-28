@@ -38,6 +38,7 @@ let gameRunning = true;
 let powerOff = false;
 
 while (gameRunning) {
+  ovenInterval = setInterval(bakeCookies, 1000);
   const input = prompt("What would you like to do?");
   switch (input) {
     case "c":
