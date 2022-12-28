@@ -37,10 +37,6 @@ console.log("Welcome to Cookie Clicker! To click the cookie, type 'c' and press 
 let gameRunning = true;
 let powerOff = false;
 
-// Set intervals for ovens and factories outside of main game loop
-ovenInterval = setInterval(bakeCookies, 1000);
-factoryInterval = setInterval(produceCookies, 1000);
-
 while (gameRunning) {
   const input = prompt("What would you like to do?");
   switch (input) {
@@ -82,6 +78,7 @@ while (gameRunning) {
               console.log("You have purchased the Cookie Oven. Your cookie production has increased.");
               cookies -= 250;
               ovenMultiplier += 2;
+              ovenInterval = setInterval(bakeCookies, 1000);
               shopRunning = false;
             } else {
               console.log("You don't have enough cookies to buy this item. Please choose another item or type 'exit' to exit the shop.");
@@ -92,6 +89,7 @@ while (gameRunning) {
               console.log("You have purchased the Cookie Factory. Your cookie production has greatly increased.");
               cookies -= 500;
               factoryMultiplier += 5;
+              factoryInterval = setInterval(produceCookies, 1000);
               shopRunning = false;
             } else {
               console.log("You don't have enough cookies to buy this item. Please choose another item or type 'exit' to exit the shop.");
