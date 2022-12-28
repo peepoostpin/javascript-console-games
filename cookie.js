@@ -17,14 +17,14 @@ const clickCookie = () => {
 };
 
 const bakeCookies = () => {
-  if (!powerOff) {
+  if (!powerOff && gameRunning) {
     cookies += 1 * ovenMultiplier;
     console.log(`Your Cookie Oven is baking cookies. You now have ${cookies} cookie(s).`);
   }
 };
 
 const produceCookies = () => {
-  if (!powerOff) {
+  if (!powerOff && gameRunning) {
     cookies += 1 * factoryMultiplier;
     console.log(`Your Cookie Factory is producing cookies. You now have ${cookies} cookie(s).`);
   }
