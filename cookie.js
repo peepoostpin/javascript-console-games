@@ -8,6 +8,7 @@ let ovenInterval;
 let factoryInterval;
 
 const clickCookie = () => {
+  console.log("Bake Cookies function called");
   if (!powerOff) {
     cookies += 1 * clickMultiplier;
     console.log(`You have ${cookies} cookie(s).`);
