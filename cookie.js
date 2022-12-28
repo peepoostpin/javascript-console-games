@@ -107,6 +107,7 @@ while (gameRunning) {
       console.log("Thanks for playing Cookie Clicker! Goodbye.");
       clearInterval(ovenInterval);
       clearInterval(factoryInterval);
+      powerOff = false;
       gameRunning = false;
       break;
     default:
