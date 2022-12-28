@@ -16,7 +16,7 @@ const clickCookie = () => {
   }
 };
 
-const bakeCookies = async () => {
+const bakeCookies = () => {
   console.log("Bake Cookies function called");
   if (!powerOff && gameRunning) {
     cookies += 1 * ovenMultiplier;
@@ -24,7 +24,7 @@ const bakeCookies = async () => {
   }
 };
 
-const produceCookies = async () => {
+const produceCookies = () => {
   if (!powerOff && gameRunning) {
     cookies += 1 * factoryMultiplier;
     console.log(`Your Cookie Factory is producing cookies. You now have ${cookies} cookie(s).`);
