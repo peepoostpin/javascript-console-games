@@ -8,7 +8,6 @@ let ovenInterval;
 let factoryInterval;
 
 const clickCookie = () => {
-  console.log("Bake Cookies function called");
   if (!powerOff) {
     cookies += 1 * clickMultiplier;
     console.log(`You have ${cookies} cookie(s).`);
@@ -18,6 +17,7 @@ const clickCookie = () => {
 };
 
 const bakeCookies = () => {
+  console.log("Bake Cookies function called");
   if (!powerOff && gameRunning) {
     cookies += 1 * ovenMultiplier;
     console.log(`Your Cookie Oven is baking cookies. You now have ${cookies} cookie(s).`);
