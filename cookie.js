@@ -4,8 +4,6 @@ let cookies = 0;
 let clickMultiplier = 1;
 let ovenMultiplier = 1;
 let factoryMultiplier = 1;
-let ovens = 0;
-let factories = 0;
 let ovenInterval;
 let factoryInterval;
 
@@ -16,19 +14,21 @@ const clickCookie = () => {
 
 const bakeCookies = () => {
   cookies += 1 * ovenMultiplier;
-  ovens += 1
   console.log(`Your Cookie Oven is baking cookies. You now have ${cookies} cookie(s).`);
 };
 
 const produceCookies = () => {
   cookies += 1 * factoryMultiplier;
-  factories += 1
   console.log(`Your Cookie Factory is producing cookies. You now have ${cookies} cookie(s).`);
 };
 
 console.log("Welcome to Cookie Clicker! To click the cookie, type 'c' and press Enter. To open the shop, type 's' and press Enter. To quit the game, type 'e' and press Enter.");
 
 let gameRunning = true;
+
+// Set intervals for ovens and factories outside of main game loop
+ovenInterval = setInterval(bakeCookies, 1000);
+factoryInterval = setInterval(produceCookies, 1000);
 
 while (gameRunning) {
   const input = prompt("What would you like to do?");
@@ -49,7 +49,7 @@ while (gameRunning) {
         switch (shopInput) {
           case "1":
             if (cookies >= 100) {
-                            console.log("You have purchased the Automatic Cookie Clicker. Cookies will now be automatically collected for you.");
+              console.log("You have purchased the Automatic Cookie Clicker. Cookies will now be automatically collected for you.");
               cookies -= 100;
               clickMultiplier += 2;
               shopRunning = false;
