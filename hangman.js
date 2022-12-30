@@ -23,7 +23,7 @@ while (lives > 0) {
 
   // Print a series of dashes
   for (let i = 0; i < 4; i++) {
-    console.log('-');
+    console.log('----------');
   }
 
   // Print a message indicating the word list
