@@ -1,4 +1,9 @@
-const wordList = ['apple', 'banana', 'cherry', 'grape', 'lemon', 'mango', 'orange', 'pear', 'pineapple', 'strawberry'];
+const objectList = ['chair', 'desk', 'lamp', 'pen', 'table'];
+const placeList = ['beach', 'cave', 'desert', 'forest', 'mountain'];
+const animalList = ['dog', 'cat', 'bird', 'fish', 'mouse'];
+
+// Pick a random word list
+const wordList = [objectList, placeList, animalList][Math.floor(Math.random() * 3)];
 
 // Pick a random word from the list
 const word = wordList[Math.floor(Math.random() * wordList.length)];
@@ -16,10 +21,19 @@ while (lives > 0) {
   // Clear the console
   console.clear();
 
-  console.log("---------------------");
-  console.log("---------------------");
-  console.log("---------------------");
-  console.log("---------------------");
+  // Print a series of dashes
+  for (let i = 0; i < 4; i++) {
+    console.log('-');
+  }
+
+  // Print a message indicating the word list
+  if (wordList === objectList) {
+    console.log('Word list: objects');
+  } else if (wordList === placeList) {
+    console.log('Word list: places');
+  } else if (wordList === animalList) {
+    console.log('Word list: animals');
+  }
 
   // Print the current state of the game
   console.log(underscores.join(' '));
